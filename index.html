@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container border p-2">
+        <div class="full_box">
+            <div class="row">
+                <div class="align-items-center col-md-1 d-flex justify-content-end">
+                    <span class="mb-4"><i class="fas fa-credit-card target_icon_link"></i></span>
+                </div>
+                <div class="align-items-baseline col-md-11 d-flex justify-content-between px-0">
+                    <div class="name_of_target">
+                        <input type="text" name="task_name" id="task_name_1" class="form-control target_name_input">
+                        <p>in list <a href="#">Doing</a></p>
+                    </div>
+                    <div class="close_btn d-flex justify-content-end align-items-center pr-2 my-2">
+                        <span><i class="fas fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-9 border">
+                    <div class=" row discription">
+                        <div class="discripion_heading d-flex d-flex justify-content-around align-items-center">
+                            <span style="font-size: x-large;"><i class="fas fa-indent"></i></i></span>
+                            <h5 class="mb-0">Discription</h5>
+                        </div>
+                        <textarea name="task_discription" id="discription_1" placeholder="Add more detailed discripion..." class="form-control disc_textarea mb-3"></textarea>
+                    </div>
+                    
+                    <div class="row activity">
+                        <div class="align-items-center d-flex justify-content-between w-100">
+                            <div class="activity_heading d-flex justify-content-around align-items-center">
+                                <span style="font-size: x-large;"><i class="fas fa-braille"></i></span>
+                                <h5 class="mb-0">Activity</h5>
+                            </div>
+                            <div class="">
+                                <button type="button" class="btn btn-link border hide_activity_btn" id="hide_activity_btn" >Hide Details</button>
+                                <button type="button" class="btn btn-link border hide_activity_btn" id="show_activity_btn" style="display: none;">show Details</button>
+                            </div>
+                        </div>
+                        <div class="mt-2 w-100 d-flex mb-2">
+                            <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                                <h6 class="user_name_letter">VG</h6>
+                            </div>
+                            <input name="acrtivity_name" id="activity_1" placeholder="write a comment..." class="form-control activity_input"></input>
+                        </div>
+                        <div class="show_activities" id="show_activity">
+                            <div class="align-items-center d-flex justify-content-between mb-2">
+                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                                    <h6 class="user_name_letter">VG</h6>
+                                </div>
+                                <div class="">
+                                    <p class="mb-0"> <span><b>vishal</b></span> remove Checklist from the cart</p>
+                                    <a href="#">2 hr ago</a>
+                                </div>
+                            </div>
+                            <div class="align-items-center d-flex justify-content-between mb-2">
+                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                                    <h6 class="user_name_letter">VG</h6>
+                                </div>
+                                <div class="">
+                                    <p class="mb-0"> <span><b>vishal</b></span> remove Checklist from the cart</p>
+                                    <a href="#">2 hr ago</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="">
+                        <p class="mb-0">Add to Cart</p>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-user"></i></span> Member</button>
+                        <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-tags"></i></span> Labels</button> -->
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-check-square"></i></span> Checklist</button>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-calendar-alt"></i></span> Date</button>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Attachment</button>
+                        <button disabled="disabled" type="button" class="btn w-100 border d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Cover Display</button>
+                    </div>
+                    <div>
+                        <p class="mb-0 mt-2">Actions</p>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-arrow-right"></i></span> Move</button>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-copy"></i></span> Copy</button>
+                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-photo-video"></i></span> Make tamplates</button>
+                        <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-eye"></i></span> Watch</button> -->
+                        <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fab fa-asymmetrik"></i></span> Archive</button> -->
+                        <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-share-alt"></i></span> Share</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </div>
+     <!-- all models in add to card  -->
+     <div class="memners_model">
+        <div class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+     </div>
+</body>
+<script>
+ $(document).ready(function(e){
+     $("#hide_activity_btn").click(function(e){
+         $("#show_activity").hide();
+         $("#show_activity_btn").show();
+         $("#hide_activity_btn").hide();
+     });
+     $("#show_activity_btn").click(function(e){
+         $("#show_activity").show();
+         $("#show_activity_btn").hide();
+         $("#hide_activity_btn").show();
+     });
+ });
+</script>
+</html>
