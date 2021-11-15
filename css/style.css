@@ -4,13 +4,25 @@
     box-sizing: border-box;
 }
 .full_box{
-        width: 80%;
+        max-width: 850px;
+        /* width: 80%; */
         margin: auto;
         border: 2px solid;
         padding: 2%;
 }
 .row{
     margin: 0%;
+}
+.target_name_input{
+    border :none;
+    font-weight: 700;
+    font-size: x-large;
+    margin-bottom: 0px;
+}
+.target_name_input:focus{
+    border: 2px solid navy;
+    box-shadow: none;
+    padding: 0rem 1rem;
 }
 .target_icon_link{
     font-size: x-large;
@@ -38,6 +50,7 @@
 .user_cart{
     border-radius: 5px solid;
     margin-bottom: 10px;
+    font-size: small    ;
 }
 .user_cart:focus, .user_cart:hover{
     box-shadow: none !important;
@@ -48,5 +61,90 @@
     border-radius: 50%  ;
 }
 .user_name_letter{
-    margin: 6px 10px;
+    margin: 0px 0px;
+    font-size: .8rem;
 }
+ /* member modal  */
+ .member_modal{
+    top: auto;
+    bottom: auto;
+    width: 25%;
+    max-width: 350px;
+ position: absolute;
+}
+.member_modal_dialog{
+    width: 100%;
+    margin: 0%;
+}
+.member_modal_content{
+    width: 100%;
+    margin: auto;
+}
+.member_modal_header{
+    padding: .5rem 1.1rem;
+}
+
+.member_close_model_btn:focus{
+    outline: none;
+}
+.member_form_control{
+    padding: .15rem 0.5rem;
+    margin-bottom: .4rem;
+}
+.member_modal_body, .member_modal_footer{
+    padding: .5rem 1rem;
+}
+.member_modal_heading{
+    font-size: .8rem;
+}
+.workspace_memners, .board_member{
+    background-color: #efefef;
+}
+.member_modal{
+    top: auto;
+    bottom: auto;
+    width: 25%;
+    max-width: 350px;
+ position: relative;
+}
+
+/* check list model  */
+/* .checklist_close_model_btn{
+    box
+} */
+.checklist_form_control:focus{
+    /* border: 2px solid; */
+    box-shadow: none;
+}
+.add_ckecklist_btn:focus, .add_ckecklist_btn:active:focus-visible, .checklist_close_model_btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+.chechlist_icon{
+    font-size: x-large;
+}
+.chechlist_name{
+    width: 28%;
+}
+.delete_add_checklist{
+    padding: .2rem .5rem;
+}
+.check_list_progress, .add_new_list, .chek_form_control, .add_row{
+    margin-left: auto;
+    width: 88%;
+}
+.add_new_list_btn:focus, .chek_form_control:focus{
+box-shadow: none !important;
+outline: none;
+}
+.addbtn{
+    width: 18%;
+}
+.settings{
+    width: 60%;
+}
+/* @media (max-width:768px){
+    #member_btn, #check_list_btn, #date_modal, #attachment_modal, #cover_display_model,#move_model, #copy_model, #MT_model{
+        width: 48% !important;
+    }
+} */

@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <!-- <link rel="stylesheet" href="./css/bootstrap.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <div class="container border p-2">
+    <div class="container-fluid border p-2">
         <div class="full_box">
             <div class="row">
                 <div class="align-items-center col-md-1 d-flex justify-content-end">
@@ -20,7 +22,7 @@
                 </div>
                 <div class="align-items-baseline col-md-11 d-flex justify-content-between px-0">
                     <div class="name_of_target">
-                        <input type="text" name="task_name" id="task_name_1" class="form-control target_name_input">
+                        <input type="text" name="task_name" id="task_name_1" class="form-control target_name_input" value="task 1">
                         <p>in list <a href="#">Doing</a></p>
                     </div>
                     <div class="close_btn d-flex justify-content-end align-items-center pr-2 my-2">
@@ -30,7 +32,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-9 border">
+                <div class="col-md-9 ">
                     <div class=" row discription">
                         <div class="discripion_heading d-flex d-flex justify-content-around align-items-center">
                             <span style="font-size: x-large;"><i class="fas fa-indent"></i></i></span>
@@ -38,7 +40,53 @@
                         </div>
                         <textarea name="task_discription" id="discription_1" placeholder="Add more detailed discripion..." class="form-control disc_textarea mb-3"></textarea>
                     </div>
-                    
+                    <div class="hide_check_list">
+                        <div id="add_check_list" class="chechlist flex-column row">
+                            <input type="hidden" value="0" id="count">
+                            <div class="align-items-center d-flex headeing justify-content-between row w-100 mb-2">
+                                <div class="chechlist_name d-f d-flex justify-content-around">
+                                    <span><i class="far fa-check-square chechlist_icon"></i></span>
+                                    <h5>Checklist</h5>
+                                </div>
+                                <button type="button" id="delete_check_list" class="btn btn-secondry delete_add_checklist">Delete</button>
+                            </div>
+                            <!-- <div class="progress mb-2 check_list_progress">
+                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div> -->
+                              <div class="ncl">
+                                <div class="new_check_list">
+                                    <input type="text" class="form-control chek_form_control mb-2">
+                              </div>
+                              <div class="">
+                                    <div class="d-flex justify-content-between row add_row">
+                                        <div class="addbtn align-items-center d-flex justify-content-around">
+                                            <button type="button" class="btn btn-primary" style="padding:.15rem .75rem">Add</button><span class="close_new_checkbox"><i style="font-size: larger;" class="fas fa-times"></i></span>
+                                        </div>
+                                        <div class="align-items-center d-flex justify-content-around settings">
+                                            <div class="assign" style="font-size: small;">
+                                                <span><a href="#"><i class="fas fa-user-plus"></i></a></span>
+                                                <a href="#" >Assign</a>
+                                            </div>
+                                            <div class="DueDate" style="font-size: small;">
+                                                <span><a href="#"><i class="far fa-clock"></i></a></span>
+                                                <a href="#">Due Date</a>
+                                            </div>
+                                            <div class="addTheRate" style="font-size: small;">
+                                                <span><a href="#"><i class="fas fa-at"></i></a></span>
+                                            </div>
+                                            <div class="emogi" style="font-size: small;">
+                                                <span><a href="#"><i class="far fa-smile-wink"></i></a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="add_new_list">
+                            <button type="button" class="btn btn-secondry add_new_list_btn">Add an item</button>
+                        </div>
+                    </div>
+                   
                     <div class="row activity">
                         <div class="align-items-center d-flex justify-content-between w-100">
                             <div class="activity_heading d-flex justify-content-around align-items-center">
@@ -51,14 +99,14 @@
                             </div>
                         </div>
                         <div class="mt-2 w-100 d-flex mb-2">
-                            <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                            <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-3 py-2" style="margin-left: 13px;">
                                 <h6 class="user_name_letter">VG</h6>
                             </div>
                             <input name="acrtivity_name" id="activity_1" placeholder="write a comment..." class="form-control activity_input"></input>
                         </div>
                         <div class="show_activities" id="show_activity">
                             <div class="align-items-center d-flex justify-content-between mb-2">
-                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-3 py-2" style="margin-left: 13px;">
                                     <h6 class="user_name_letter">VG</h6>
                                 </div>
                                 <div class="">
@@ -67,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="align-items-center d-flex justify-content-between mb-2">
-                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-4 py-2" style="margin-left: 13px;">
+                                <div class="align-items-center bg-danger border d-flex justify-content-center user_name px-3 py-2" style="margin-left: 13px;">
                                     <h6 class="user_name_letter">VG</h6>
                                 </div>
                                 <div class="">
@@ -79,20 +127,20 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="">
+                    <div class="row">
                         <p class="mb-0">Add to Cart</p>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-user"></i></span> Member</button>
+                        <button type="button" id="member_btn" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-user"></i></span> Member</button>
                         <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-tags"></i></span> Labels</button> -->
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-check-square"></i></span> Checklist</button>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-calendar-alt"></i></span> Date</button>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Attachment</button>
-                        <button disabled="disabled" type="button" class="btn w-100 border d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Cover Display</button>
+                        <button type="button" id="check_list_btn" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-check-square"></i></span> Checklist</button>
+                        <button type="button" id="date_modal" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-calendar-alt"></i></span> Date</button>
+                        <button type="button" id="attachment_modal" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Attachment</button>
+                        <button disabled="disabled" id="cover_display_model" type="button" class="btn w-100 border d-flex"> <span class="mr-2"><i class="fas fa-paperclip"></i></span> Cover Display</button>
                     </div>
                     <div>
                         <p class="mb-0 mt-2">Actions</p>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-arrow-right"></i></span> Move</button>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-copy"></i></span> Copy</button>
-                        <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-photo-video"></i></span> Make tamplates</button>
+                        <button type="button" id="move_model" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-arrow-right"></i></span> Move</button>
+                        <button type="button" id="copy_model" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-copy"></i></span> Copy</button>
+                        <button type="button" id="MT_model" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-photo-video"></i></span> Make tamplates</button>
                         <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="far fa-eye"></i></span> Watch</button> -->
                         <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fab fa-asymmetrik"></i></span> Archive</button> -->
                         <!-- <button type="button" class="btn w-100 border user_cart d-flex"> <span class="mr-2"><i class="fas fa-share-alt"></i></span> Share</button> -->
@@ -102,30 +150,67 @@
         </div>          
     </div>
      <!-- all models in add to card  -->
-     <div class="memners_model">
-        <div class="modal fade" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span>&times;</span>
-                  </button>
+     <!-- member modal  -->
+     <div class="modal member_modal" id="member_bodel" tabindex="-1" role="dialog">
+        <div class="modal-dialog member_modal_dialog" role="document">
+          <div class="modal-content member_modal_content">
+            <div class="modal-header member_modal_header">
+              <p class="modal-title">Member</p>
+              <button type="button" class="close member_close_model_btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body member_modal_body">
+                <input type="text" name="board_member_name" id="board_member_name_id" class="form-control member_form_control">
+                <h6 class="member_modal_heading">Board Members</h6>
+                <div class="align-items-center rounded d-flex mb-2 board_member p-1">
+                    <div class="bg-danger  d-flex justify-content-center user_name px-3 py-2" style="margin-left: 13px;">
+                        <h6 class="user_name_letter">VG</h6>
+                    </div>
+                    <div class="">
+                        <p class="mb-0 pl-2"> <span>vishal</span>(vishal1023)</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <p>Modal body text goes here.</p>
+            </div>
+            <div class="align-items-stretch flex-column modal-footer member_modal_footer">
+                <h6 class="member_modal_heading">Workspace Members</h6>
+                <div class="workspace_memners rounded">
+                    <p class="mb-0 px-2 py-1">show other workpress members</p>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
             </div>
           </div>
-     </div>
+        </div>
+      </div>
+
+      <!-- Checklist model  -->
+      <div class="modal modal_modal" id="check_list_bodel" tabindex="-1" role="dialog"  >
+        <div class="modal-dialog modal_dialog" role="document">
+          <div class="modal-content modal_content">
+            <div class="modal-header modal_header">
+              <p class="modal-title">Add Checklist</p>
+              <button type="button" class="close checklist_close_model_btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"    >&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal_body">
+                <h6 class="modal_heading">Title</h6>
+                <input type="text" name="board_member_name" id="checklist_name_id" class="form-control checklist_form_control">
+            </div>
+            <div class="justify-content-between modal-footer">
+                <button type="button" id="add_check_list" class="btn btn-primary add_ckecklist_btn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- date modal -->
+       <input type="date" class="form-comtrol">
+       <!-- Attachment model  -->
+       <input type="file" class="form-comtrol">
 </body>
 <script>
- $(document).ready(function(e){
+$(document).ready(function(e){
+     // Activity hide show
      $("#hide_activity_btn").click(function(e){
          $("#show_activity").hide();
          $("#show_activity_btn").show();
@@ -136,6 +221,84 @@
          $("#show_activity_btn").hide();
          $("#hide_activity_btn").show();
      });
- });
+     
+     //Board Member model
+     $("#member_btn").click(function(e){
+         position = $("#member_btn").position();
+         height = $("#member_btn").height();
+         width =  $("#member_btn").width();
+         console.log(position);
+         console.log(height);
+         console.log(width);
+         
+        $("#member_bodel").slideToggle("slow");
+        $("#member_bodel").css({"top":position.top + height +100 ,"left":position.left + width } );  
+     });
+        $(".member_close_model_btn").click(function(){
+            $("#member_bodel").slideUp();
+        });
+
+        //  hide member modal when click on window 
+        $(document).mouseup(function (e) {
+        var member_modal = $("#member_bodel");
+        // If the target of the click isn't the container
+        if (!member_modal.is(e.target) && member_modal.has(e.target).length === 0) {
+                member_modal.slideUp();
+            
+	}
+});     
+        // open check list
+        $("#check_list_btn").click(function(e){
+            $("#check_list_bodel").slideToggle();
+            // close checklist task 
+            // $(".close_new_checkbox").click(function(){
+            //     $(".ncl").hide();
+            // });
+        //delete check list
+        $("#delete_check_list").click(function(){
+            $(".hide_check_list").remove();
+        });
+        //close model list
+        $(".checklist_close_model_btn").click(function(){
+            $("#check_list_bodel").hide();
+        });
+
+        //date modal    
+        $("#date_modal").click(function(){
+            html = `<input type="date">`
+        })
+
+    });
+});
+
+//     // checklist model
+//     $("#check_list_btn").click(function(e){
+//         $("#check_list_bodel").slideToggle();
+// //count value fetch
+// var count = $("#count").val();
+// //increment
+// count++;
+//     var Check_List_name = $("#checklist_name_id").val();
+//     // var User_l_name = $("#l_name").val();
+//     if(Check_List_name==""){
+//         alert("Check list name is empty");
+//         }else{
+//             console.log(Check_List_name);
+//         // var html_create_row = 
+//         // `<tr id="tabletr${count}">
+//         //         <td id="fn${count}">${User_f_name}</td>
+//         //         <td id="ln${count}">${User_l_name}</td>
+//         //         <td></td>
+//         //         <td><button class="delete_btn${count}"  type="button" onclick = "delete_td('tabletr${count}')">Delete</button>
+//         //         <button class="save_btn${count}"  type="button" onclick = "change_color_fn('tabletr${count}',${count})">save</button> </td>
+//         // </tr>`;
+// $("#table_body").append(html_create_row);
+// //input count value reasign
+// $("#count").val(count);
+// }
+// });
+    
+
+
 </script>
 </html>
